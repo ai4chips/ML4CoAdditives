@@ -1,0 +1,8 @@
+## Data Flow Relationship
+1. Data Input: Uses `QM9_CN.csv` as the raw data source, providing molecular SMILES and target properties.
+
+2. Feature Generation: Reads SMILES from `QM9_CN.csv` via `qm9_CN_convert.ipynb` to calculate molecular descriptors.
+
+3. Data Splitting:
+   - Extracts target properties from `QM9_CN.csv` and stores them as `EnergyGap.pkl` (y-label).
+   - Saves the generated molecular descriptors as `rdkit_descriptors(208).pkl` (x-features), which contains 208 descriptor dimensions.

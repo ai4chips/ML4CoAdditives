@@ -1,0 +1,18 @@
+# File Description
+## Directory & File Explanation
+1. **Input Folder**
+   - Content: Stores **intermediate data generated from the previous workflow** (including descriptor files, label files, etc.), which serves as the input data source for feature engineering.
+
+2. **Output Folder**
+   - Content: Stores the output results of this feature engineering process, including the file `gap_29.pkl` (the 29 final filtered descriptors).
+
+3. **feature_engineering.ipynb**
+   - Type: Jupyter Notebook script
+   - Function: Reads the previous-step data from the Input folder and executes the feature engineering process (steps below):
+     ① Variance test 
+     ② Random Forest feature importance ranking
+     ③ Pearson correlation coefficient analysis
+     ④ Output result → Obtain 29 descriptors, saved as `gap_29.pkl` in the Output folder.
+
+4. **gap_29.pkl (in Output Folder)**
+     - Content: The 29 final descriptor data obtained after feature engineering processing.
